@@ -1,0 +1,106 @@
+header {
+  height: 134px;
+  @media (width = "768px") {
+    height: 117px;
+  }
+  @media (width < "768px") {
+    height: 96px;
+  }
+  @media (width < "1440px") {
+    /*  padding-left: 4%;
+    padding-right: 4%; */
+  }
+
+  width: 100%;
+  background: $bg-color;
+  nav > ul > li > a {
+    text-decoration: none;
+    line-height: 50px;
+    color: $links-color;
+  }
+  .navsection {
+    @media (width < "1440px") {
+      width: calc(87vw);
+      margin: 0 auto;
+    }
+    @media (width = "768px") {
+      padding-top: 3.3%;
+    }
+
+    @media (width < "768px") {
+      padding-top: 11.3%;
+      width: fit-content;
+    }
+    @media (width <"380px") {
+      width: auto;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    padding-top: 2.3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__nav {
+      font-family: "Inika";
+      width: 491px;
+      @media (width <"768px") {
+        width: initial;
+        display: flex;
+        height: 0px;
+        margin-top: -70px;
+      }
+      @media (width <"380px") {
+        width: 225px;
+      }
+      & > ul {
+        list-style-type: none;
+        justify-content: space-between;
+        display: flex;
+        transition: 0.3s;
+        &:nth-child(1) > a:focus {
+          color: $orange-color;
+        }
+        & > li > a:hover {
+          color: $orange-color;
+          font-weight: 700;
+        }
+        @media (width <"768px") {
+          opacity: 0;
+          display: flex;
+
+          width: 200px;
+          padding: 0;
+          margin: 0;
+          font-size: 11px;
+        }
+        @media (width <"380px") {
+          font-size: 10px;
+        }
+      }
+      &-img {
+        display: none;
+        @media (width <"768px") {
+          width: 40px;
+          height: 26px;
+          display: block;
+          padding-left: 10px;
+          padding-top: 8px;
+        }
+        @media (width < "380px") {
+          /* padding-left: 185px; */
+        }
+      }
+      &-active {
+        color: $orange-color;
+        font-weight: 700;
+      }
+    }
+    &__logo > img {
+      padding-bottom: 8px;
+      @media (width < "768px") {
+        padding-bottom: 22px;
+        margin-left: -6px;
+      }
+    }
+  }
+}

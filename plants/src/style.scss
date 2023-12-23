@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika&family=Inter&display=swap");
+$green-color: #499a18;
+$orange-color: #e06733;
+$grey-color: #717171;
+$greyblack-color: #636060;
+$white-color: #ffffff;
+$bg-color: #edf2ec;
+$links-color: #010201;
+$black-color: #000000;
+$grid-item-color: #e3e1d5;
+$interactive-price-plan-color: #aea1a1;
+$light-green-color: #d6e7d2;
+
+html {
+  scroll-behavior: smooth;
+
+  & > body {
+    width: 100%;
+    margin: 0 auto;
+    height: 3870px;
+    @media (width = 768px) {
+      height: 100vh;
+    }
+    /*  min-width: 1220px; */
+
+    & .wrapper {
+      @import "./styles/header.scss";
+      @import "./styles/main.scss";
+      @import "./styles/footer.scss";
+      &__content {
+        @media (width = "768px") {
+          max-width: 667px;
+        }
+        @media (width < "768px") {
+          max-width: 320px;
+          margin: 0 auto;
+        }
+        @media (width <"380px") {
+          /*  padding-left: 5px;
+          padding-right: 5px; */
+          margin: 0 auto;
+        }
+        max-width: 1220px;
+        width: 100%;
+        margin: 0 auto;
+        height: 100%;
+      }
+    }
+  }
+}
+@import "./styles/media.scss";

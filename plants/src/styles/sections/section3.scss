@@ -1,0 +1,187 @@
+.section3 {
+  height: 1320px;
+  margin-top: -19px;
+  @media (width < "1440px") {
+    height: 1798px;
+  }
+  @media (width < "768px") {
+    height: 3171px;
+  }
+
+  background: $bg-color;
+  &__description {
+    margin-bottom: 44px;
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    width: 83.1%;
+    justify-content: space-between;
+    flex-direction: row;
+    @media (width < "1440px") {
+      margin-bottom: 28px;
+      padding-top: 23px;
+      padding-left: calc(10vw);
+    }
+    @media (width = "768px") {
+      padding-left: 0vw;
+    }
+    @media (width = "380px") {
+      padding-left: 0vw;
+    }
+
+    @media (width < "1440px") {
+      padding-top: 11px;
+      flex-direction: column;
+    }
+    @media (width < "768px") {
+      margin-bottom: 33px;
+    }
+
+    &-buttons {
+      display: flex;
+      width: 560px;
+      justify-content: space-between;
+      padding-right: 8px;
+      @media ("768px" <width < 1440px) {
+        align-self: flex-start;
+        width: calc(82vw - 6%);
+        padding-top: 6px;
+      }
+      @media (width = "768px") {
+        padding-right: 0px;
+      }
+      @media (width < "768px") {
+        width: 285px;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        padding-right: 0;
+        margin-left: -4px;
+        padding-top: 6px;
+      }
+      & > button {
+        width: 161px;
+        height: 50px;
+        font-family: "Inika";
+        font-size: 20px;
+        line-height: 26px;
+        color: $orange-color;
+        background: none;
+        border: 1px solid $orange-color;
+        border-radius: 5px;
+        transition: 0.3s;
+        cursor: pointer;
+        @media (width<"1440px") {
+          margin-bottom: 12px;
+        }
+        @media (width<"768px") {
+          width: 121px;
+          height: 35px;
+          font-size: 15px;
+          margin: 4.5px 5px;
+        }
+        @media (width>"1024px") {
+          &:hover {
+            background: $orange-color;
+            color: $white-color;
+          }
+        }
+        /*   */
+        &.active-button {
+          background: $orange-color;
+          color: $white-color;
+        }
+      }
+    }
+    & > h2 {
+      font-family: "Inika";
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 52px;
+      color: $green-color;
+      width: 300px;
+      @media (width < "1440px") {
+        font-size: 35px;
+        align-self: flex-start;
+        padding-top: 14px;
+        margin-bottom: 36px;
+      }
+      @media (width < "768px") {
+        font-size: 25px;
+        line-height: 33px;
+        width: 278px;
+        margin-bottom: 26px;
+        margin-top: 6px;
+      }
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (width < "1440px") {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 0;
+
+      grid-row-gap: 2.5%;
+    }
+    @media (width = "768px") {
+      grid-column-gap: calc(14vw);
+    }
+    @media (width < "768px") {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0%;
+      grid-row-gap: 1.2%;
+    }
+    grid-column-gap: 9.26%;
+    grid-row-gap: 6.1%;
+    &-item {
+      justify-self: center;
+      border: 1px solid $grid-item-color;
+      border-radius: 20px 20px 20px 20px;
+      transition: 1s;
+      height: 449px;
+      @media (width < "1440px") {
+        width: 281px;
+        height: 450px;
+        overflow: hidden;
+      }
+
+      & > p {
+        text-align: center;
+        font-family: "Inter";
+        &:nth-child(2) {
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 20px;
+          color: $orange-color;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          @media (width<"768px") {
+            letter-spacing: 0.1px;
+            margin-bottom: 8px;
+            text-align: center;
+            width: 278px;
+            margin-bottom: 8px;
+            margin-bottom: 11px;
+          }
+        }
+        &:nth-child(3) {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: $grey-color;
+          margin-top: 14px;
+          @media (width <"1440px") {
+            font-size: 17px;
+            line-height: 19px;
+            margin-top: 11px;
+          }
+          @media (width <"768px") {
+            width: 265px;
+            text-align: center;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

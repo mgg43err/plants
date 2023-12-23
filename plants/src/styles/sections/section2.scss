@@ -1,0 +1,105 @@
+.section2 {
+  height: 684px;
+  margin-top: -19px;
+  @media (width < "1440px") {
+    height: 802px;
+  }
+  @media (width < "768px") {
+    height: 535px;
+  }
+
+  background: #ffffff;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    @media (width < "1440px") {
+      flex-direction: column;
+      padding-top: 0;
+    }
+    @media (width < "768px") {
+      flex-direction: column;
+      padding-top: 0;
+    }
+    &-image {
+      padding-top: 30px;
+      @media (width < "1440px") {
+        padding-top: 8px;
+      }
+      @media (width < "768px") {
+        padding-top: 0;
+      }
+    }
+    &-description {
+      @media (width < "1440px") {
+        width: 667px;
+      }
+      @media (width < "768px") {
+        width: 320px;
+        padding-top: 0;
+      }
+      width: 620px;
+      padding-top: 25px;
+      & > h2 {
+        @media (width < "1440px") {
+          text-align: center;
+          margin: -15px auto;
+          font-size: 35px;
+          line-height: 46px;
+        }
+        @media (width <"768px") {
+          text-align: center;
+          font-size: 24px;
+          line-height: 33px;
+          margin: 0;
+          padding-top: 32px;
+          width: 296px;
+          letter-spacing: -0px;
+          padding-left: 12px;
+          letter-spacing: 0.5px;
+        }
+
+        width: 428px;
+        font-family: "Inika", serif;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+        margin-top: 7px;
+        padding-top: 32px;
+        color: $green-color;
+        & > a {
+          color: $orange-color;
+        }
+      }
+      & > p {
+        @media (width<"1440px") {
+          line-height: 30px;
+          letter-spacing: 0;
+          margin: 57px auto;
+        }
+        font-family: "Inter";
+        font-size: 20px;
+        line-height: 30px;
+        color: $greyblack-color;
+        padding-top: 5px;
+        letter-spacing: 0.2px;
+        letter-spacing: 0.03px;
+        padding-bottom: 5px;
+        @media (width < "768px") {
+          width: 320px;
+          height: 228.38px;
+          font-size: 15px;
+          line-height: 25px;
+          margin: 0;
+          padding: 0;
+          padding-top: 11px;
+          letter-spacing: -0.2px;
+        }
+        @media (width <"380px") {
+          width: 314px;
+        }
+      }
+    }
+  }
+}

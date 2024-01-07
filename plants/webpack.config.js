@@ -6,7 +6,7 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.resolve(__dirname, "dist"),
     },
     compress: true,
     port: 9000,
@@ -25,4 +25,9 @@ module.exports = {
     ],
   },
   watch: true,
+   performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+}
 };
